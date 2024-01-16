@@ -1,0 +1,40 @@
+import { ReactElement } from 'react';
+import { StylesType } from '../../styles';
+export type DateRange = {
+    startDate: Date;
+    endDate: Date;
+    color?: string;
+    key?: string;
+    autoFocus?: boolean;
+    disabled?: boolean;
+    showDateDisplay?: boolean;
+    label?: string;
+};
+export type DayCellProps = {
+    day: Date;
+    dayDisplayFormat: string;
+    date?: Date;
+    ranges: DateRange[];
+    displayMode: "dateRange" | "date";
+    preview?: {
+        startDate?: Date;
+        endDate?: Date;
+        color?: string;
+    };
+    onPreviewChange?: (date?: Date) => void;
+    disabled?: boolean;
+    isPassive?: boolean;
+    isToday?: boolean;
+    isWeekend?: boolean;
+    isStartOfWeek?: boolean;
+    isEndOfWeek?: boolean;
+    isStartOfMonth?: boolean;
+    isEndOfMonth?: boolean;
+    onMouseDown?: (date: Date) => void;
+    onMouseUp?: (date: Date) => void;
+    onMouseEnter?: (date: Date) => void;
+    color: string;
+    styles: StylesType;
+    dayContentRenderer?: (date: Date) => ReactElement;
+};
+export default function DayCell({ day, dayDisplayFormat, date, ranges, preview, onPreviewChange, disabled, isPassive, isToday, isWeekend, isStartOfWeek, isEndOfWeek, isStartOfMonth, isEndOfMonth, displayMode, onMouseDown, onMouseUp, onMouseEnter, color, styles, dayContentRenderer }: DayCellProps): import("react/jsx-runtime").JSX.Element;
