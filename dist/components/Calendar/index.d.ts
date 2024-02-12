@@ -1,6 +1,6 @@
 import React from 'react';
 import { StylesType } from '../../styles';
-import { AriasLabelsType } from '../../accessibility';
+import { AriaLabelsType } from '../../accessibility';
 import { Locale } from 'date-fns';
 import { DateRange } from '../DayCell';
 export type CalendarProps = {
@@ -56,6 +56,7 @@ export type CalendarProps = {
     fixedHeight?: boolean;
     calendarFocus?: "forwards" | "backwards";
     preventSnapRefocus?: boolean;
-    ariaLabels?: AriasLabelsType;
+    ariaLabels?: AriaLabelsType;
+    preventScrollToFocusedMonth?: boolean;
 };
-export default function Calendar({ showMonthArrow, showMonthAndYearPickers, disabledDates, disabledDay, minDate, maxDate, date, onChange, onPreviewChange, onRangeFocusChange, classNames, locale, shownDate, onShownDateChange, ranges, preview, dateDisplayFormat, monthDisplayFormat, weekdayDisplayFormat, weekStartsOn, dayDisplayFormat, focusedRange, dayContentRenderer, months, className, showDateDisplay, showPreview, displayMode, color, updateRange, scroll, direction, startDatePlaceholder, endDatePlaceholder, rangeColors, editableDateInputs, dragSelectionEnabled, fixedHeight, calendarFocus, preventSnapRefocus, ariaLabels, }: CalendarProps): import("react/jsx-runtime").JSX.Element;
+export default function Calendar({ showMonthArrow, showMonthAndYearPickers, disabledDates, disabledDay, minDate, maxDate, date, onChange, onPreviewChange, onRangeFocusChange, classNames, locale, shownDate, onShownDateChange, ranges, preview, dateDisplayFormat, monthDisplayFormat, weekdayDisplayFormat, weekStartsOn, dayDisplayFormat, focusedRange, dayContentRenderer, months, className, showDateDisplay, showPreview, displayMode, color, updateRange, scroll, direction, startDatePlaceholder, endDatePlaceholder, rangeColors, editableDateInputs, dragSelectionEnabled, fixedHeight, calendarFocus, preventSnapRefocus, ariaLabels, preventScrollToFocusedMonth }: CalendarProps): import("react/jsx-runtime").JSX.Element;
