@@ -18,10 +18,12 @@ export type DefinedRangeProps = {
     footerContent?: ReactElement;
     focusedRange?: number[];
     rangeColors?: string[];
+    focusNextRangeOnDefinedRangeClick?: boolean;
     onPreviewChange?: (value?: DateRange) => void;
     onChange?: (value: {
         [x: string]: DateRange;
     }) => void;
     renderStaticRangeLabel?: (staticRange: DefinedRangeProps["staticRanges"][number]) => ReactElement;
+    onRangeFocusChange?: (range: number[]) => void;
 };
-export default function DefinedRange({ className, headerContent, footerContent, inputRanges, staticRanges, rangeColors, ranges, focusedRange, onChange, onPreviewChange, renderStaticRangeLabel }: DefinedRangeProps): import("react/jsx-runtime").JSX.Element;
+export default function DefinedRange({ className, headerContent, footerContent, inputRanges, staticRanges, rangeColors, ranges, focusedRange, focusNextRangeOnDefinedRangeClick, onChange, onPreviewChange, renderStaticRangeLabel, onRangeFocusChange }: DefinedRangeProps): import("react/jsx-runtime").JSX.Element;
