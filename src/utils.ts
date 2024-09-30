@@ -27,7 +27,7 @@ export function calcFocusDate(currentFocusedDate: Date, shownDate?: Date, date?:
       endDate: date,
     };
   }
-  targetInterval.startDate = startOfMonth(targetInterval.startDate || new Date());
+  targetInterval.startDate = startOfMonth(targetInterval.startDate || shownDate || new Date());
   targetInterval.endDate = endOfMonth(targetInterval.endDate || targetInterval.startDate);
   const targetDate = targetInterval.startDate || targetInterval.endDate || shownDate || new Date();
 
